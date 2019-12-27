@@ -1,16 +1,16 @@
 pragma solidity ^0.5.8;
 
 //Change the contract name to your token name
-contract ANYToken {
+contract HaloClassic {
     // Name your custom token
-    string public constant name = "ANY TOKEN";
+    string public constant name = "HALO CLASSIC";
 
     // Name your custom token symbol
-    string public constant symbol = "ANY";
+    string public constant symbol = "HALOC";
 
     uint8 public constant decimals = 18;
     
-    // Contract owner will be your Link account
+    // Contract owner will be your Halo Account
     address public owner;
 
     address public treasury;
@@ -28,10 +28,10 @@ contract ANYToken {
         owner = msg.sender;
 
         // Add your wallet address here which will contain your total token supply
-        treasury = address(<wallet address>);
+        treasury = address(0x5480c690c9c6e48690f0e6969b4520f73f515caa);
 
-        // Set your total token supply (default 1000)
-        totalSupply = 1000 * 10**uint(decimals);
+        // Set your total token supply (default 1,000,000)
+        totalSupply = 1000000 * 10**uint(decimals);
 
         balances[treasury] = totalSupply;
         emit Transfer(address(0), treasury, totalSupply);
